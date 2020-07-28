@@ -7,10 +7,32 @@ $lightModeInput: hsl(0, 0%, 52%);
 $lightModeBackground: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%); //dark mode text and light mode elements
 
-body {
-    background: $lightModeBackground;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
 }
 
+body {
+    background: $lightModeBackground;
+    margin: 0;
+}
+
+main {
+    margin: 0 5%;
+}
+// navbar section
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em;
+    background-color: $white;
+    box-shadow: 0px 2px 10px $lightModeInput;
+}
+
+// Cards section
 .cards-container {
     display: flex;
     flex-direction: row;
