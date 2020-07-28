@@ -16,34 +16,17 @@ export default function HomePage() {
 
                 const country = (
                     <div className="cards-container">
-                        <CountryCards
-                            flag={data.flag}
-                            name={data.name}
-                            population={data.population}
-                            region={data.region}
-                            capital={data.capital}
-                        />{" "}
-                        <CountryCards
-                            flag={data.flag}
-                            name={data.name}
-                            population={data.population}
-                            region={data.region}
-                            capital={data.capital}
-                        />{" "}
-                        <CountryCards
-                            flag={data.flag}
-                            name={data.name}
-                            population={data.population}
-                            region={data.region}
-                            capital={data.capital}
-                        />{" "}
-                        <CountryCards
-                            flag={data.flag}
-                            name={data.name}
-                            population={data.population}
-                            region={data.region}
-                            capital={data.capital}
-                        />
+                        {allCountries.map((data) => {
+                            return (
+                                <CountryCards
+                                    flag={data.flag}
+                                    name={data.name}
+                                    population={data.population}
+                                    region={data.region}
+                                    capital={data.capital}
+                                />
+                            );
+                        })}
                     </div>
                 );
 
