@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+$darkModeElements: hsl(209, 23%, 22%);
+$darkModeBackground: hsl(207, 26%, 17%);
+$lightModeText: hsl(200, 15%, 8%);
+$lightModeInput: hsl(0, 0%, 52%);
+$lightModeBackground: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%); //dark mode text and light mode elements
+
+body {
+    background: $lightModeBackground;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.cards {
+    background-color: #fff;
+    border-radius: 5px;
+    img {
+        width: 14rem;
+        z-index: 0;
+    }
+    .cards-contents {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 14px;
+        padding: 0 1em 1em 1em;
+
+        h3 {
+            font-weight: 800;
+        }
+        p {
+            font-weight: 600;
+
+            span {
+                font-weight: 300;
+            }
+        }
+    }
+}
