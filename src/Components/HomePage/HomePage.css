@@ -67,7 +67,21 @@ main {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  background-color: #f00;
+  padding: 1em;
+  margin: 2% 0 0 3%;
+  width: 40%;
+  -webkit-box-shadow: 0px 2px 10px #ccc;
+          box-shadow: 0px 2px 10px #ccc;
+  border-radius: 5px;
+}
+
+.search .search-icon {
+  color: #2b3945;
+}
+
+.search input {
+  margin-left: 1em;
+  border: none;
 }
 
 .cards-container {
