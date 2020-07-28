@@ -1,17 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
+import useCountriesData from "../CustomHooks/countriesData";
 
 export default function HomePage() {
-    useEffect(function () {
-        async function getCountries() {
-            const response = await fetch(
-                "https://restcountries.eu/rest/v2/all"
-            );
-            const processedResponse = await response.json();
-
-            console.log({ processedResponse });
-        }
-        getCountries();
-    });
+    const allCountries = useCountriesData();
 
     return <>Home Page</>;
 }
