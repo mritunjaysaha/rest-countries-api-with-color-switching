@@ -37,7 +37,7 @@ export default function Filter(props) {
                         <em>None</em>
                     </MenuItem>
                     <MenuItem value="africa">Africa</MenuItem>
-                    <MenuItem value="america">America</MenuItem>
+                    <MenuItem value="americas">America</MenuItem>
                     <MenuItem value="asia">Asia</MenuItem>
                     <MenuItem value="europe">Europe</MenuItem>
                     <MenuItem value="oceania">Oceania</MenuItem>

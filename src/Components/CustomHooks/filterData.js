@@ -1,24 +1,24 @@
 import { useEffect, useState } from "react";
 
-export default function useCountriesData(query) {
+export default function useFilteredData(region) {
     const [countries, setCountries] = useState();
     const [error, setError] = useState(true);
-    const text = query ? "name/" + query : "all";
 
     useEffect(
         function () {
             async function getCountries() {
                 const response = await fetch(
-                    `https://restcountries.eu/rest/v2/${text}`
+                    `https://restcountries.eu/rest/v2/region/${region}`
                 );
                 const processedResponse = await response.json();
                 setCountries(processedResponse);
                 setError(false);
+                console.log("region", processedResponse);
             }
 
             getCountries();
         },
-        [text]
+        [region]
     );
 
     return [countries, error];

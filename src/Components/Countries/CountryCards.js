@@ -3,7 +3,9 @@ import React from "react";
 export default function CountryCards(props) {
     return (
         <div className="cards">
-            <img src={props.flag} alt={props.name} />
+            <div>
+                <img src={props.flag} alt={props.name} />
+            </div>
             <div className="cards-contents">
                 <h3 className="name">{props.name}</h3>
                 <p>
