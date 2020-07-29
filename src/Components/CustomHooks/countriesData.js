@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 
-export default function useCountriesData(query) {
+export default function useCountriesData(query, region) {
     const [countries, setCountries] = useState();
     const [error, setError] = useState(true);
     const text = query ? "name/" + query : "all";
     useEffect(
         function () {
             async function getCountries() {
-                const response = await fetch(
-                    `https://restcountries.eu/rest/v2/${text}`
-                );
+                let response = region
+                    ? `https://restcountries.eu/rest/v2/region/${text}`
+                    : await fetch(`https://restcountries.eu/rest/v2/${text}`);
                 const processedResponse = await response.json();
                 console.log(processedResponse);
                 setCountries(processedResponse);
@@ -17,7 +17,7 @@ export default function useCountriesData(query) {
             }
             getCountries();
         },
-        [text]
+        [text, region]
     );
 
     return [countries, error];

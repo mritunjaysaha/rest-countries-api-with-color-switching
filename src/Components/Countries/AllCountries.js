@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import CountryCards from "./CountryCards";
 import useCountriesData from "../CustomHooks/countriesData";
 import Search from "../SearchAndFilter/Search";
-import SimpleSelect from "../SearchAndFilter/Select";
+import Filter from "../SearchAndFilter/Filter";
 export default function AllCountries() {
     const [country, setCountry] = useState();
     const [query, setQuery] = useState("");
@@ -33,15 +33,15 @@ export default function AllCountries() {
         [allCountries, error]
     );
 
-    function search(e) {
+    function handleChange(e) {
         setQuery(e.target.value);
     }
 
     return (
         <>
             <section className="search-filter">
-                <Search search={search} value={query} />
-                <SimpleSelect />
+                <Search search={handleChange} value={query} />
+                <Filter filter={handleChange} value={query} />
             </section>
             <section id="countries">{country}</section>
         </>

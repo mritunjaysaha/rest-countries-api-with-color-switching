@@ -16,13 +16,8 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function SimpleSelect() {
+export default function Filter(props) {
     const classes = useStyles();
-    const [age, setAge] = React.useState("");
-
-    const handleChange = (event) => {
-        setAge(event.target.value);
-    };
 
     return (
         <div>
@@ -33,15 +28,19 @@ export default function SimpleSelect() {
                 <Select
                     labelId="demo-simple-select-helper-label"
                     id="demo-simple-select-helper"
-                    value={age}
-                    onChange={handleChange}
+                    value={props.region}
+                    onChange={(e) => {
+                        props.filter(e);
+                    }}
                 >
                     <MenuItem value="">
                         <em>None</em>
                     </MenuItem>
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
+                    <MenuItem value="africa">Africa</MenuItem>
+                    <MenuItem value="america">America</MenuItem>
+                    <MenuItem value="asia">Asia</MenuItem>
+                    <MenuItem value="europe">Europe</MenuItem>
+                    <MenuItem value="oceania">Oceania</MenuItem>
                 </Select>
             </FormControl>
         </div>
