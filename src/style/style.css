@@ -67,10 +67,10 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 2% 0 0 3%;
+  margin: 3em 3.2em 2em 3.2em;
 }
 
-.search {
+.searchandfilter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,24 +82,28 @@ main {
       -ms-flex-align: center;
           align-items: center;
   background-color: white;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   height: 3em;
-  width: 40%;
   -webkit-box-shadow: 0px 2px 10px #ccc;
           box-shadow: 0px 2px 10px #ccc;
   border-radius: 5px;
 }
 
-.search .search-icon {
+.searchandfilter .search-icon {
   margin-left: 1em;
 }
 
-.search input {
+.searchandfilter input {
   margin-left: 1em;
   border: none;
   width: 85%;
+}
+
+.search {
+  width: 30em;
+}
+
+.filter {
+  width: 11em;
 }
 
 .cards-container {
@@ -120,8 +124,8 @@ main {
 .cards {
   background-color: white;
   border-radius: 5px;
-  width: 20%;
-  margin: 2%;
+  width: 16em;
+  margin: 1em 1.5em;
   -webkit-box-shadow: 0px 2px 10px #ccc;
           box-shadow: 0px 2px 10px #ccc;
 }
@@ -148,4 +152,4 @@ main {
 .cards .cards-contents p span {
   font-weight: 300;
 }
-/*# sourceMappingURL=HomePage.css.map */
+/*# sourceMappingURL=style.css.map */

@@ -20,7 +20,7 @@ export default function Filter(props) {
     const classes = useStyles();
 
     return (
-        <div>
+        <div className="searchandfilter filter">
             <FormControl className={classes.formControl}>
                 <InputLabel id="demo-simple-select-helper-label">
                     Filter by Region

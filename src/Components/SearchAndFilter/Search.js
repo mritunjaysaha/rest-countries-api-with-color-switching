@@ -1,13 +1,9 @@
 import React from "react";
 import UilSearch from "@iconscout/react-unicons/icons/uil-search";
 
-// https://restcountries.eu/rest/v2/name/{name}
-// https://restcountries.eu/rest/v2/capital/{capital}
-// https://restcountries.eu/rest/v2/region/{region}
-
 export default function Search(props) {
     return (
-        <div className="search">
+        <div className="searchandfilter search">
             <UilSearch className="icons search-icon" />
             <input
                 id="search"
