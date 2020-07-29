@@ -1,8 +1,13 @@
 import React from "react";
-
+import { navigate } from "@reach/router";
 export default function CountryCards(props) {
     return (
-        <div className="cards">
+        <div
+            className="cards"
+            onClick={() => {
+                navigate("/details");
+            }}
+        >
             <div>
                 <img src={props.flag} alt={props.name} />
             </div>
