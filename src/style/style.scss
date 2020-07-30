@@ -7,6 +7,7 @@ $lightModeInput: hsl(0, 0%, 52%);
 $lightModeBackground: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%); //dark mode text and light mode elements
 $shadow: 0px 2px 10px #ccc;
+$radius: 5px;
 *,
 *::after,
 *::before {
@@ -17,6 +18,8 @@ body {
     background: $lightModeBackground;
     margin: 0;
     color: $lightModeText;
+    font-family: "Nunito Sans";
+    font-weight: 14px;
 }
 
 main {
@@ -56,7 +59,7 @@ main {
     background-color: $white;
     height: 3em;
     box-shadow: $shadow;
-    border-radius: 5px;
+    border-radius: $radius;
     .search-icon {
         margin-left: 1em;
     }
@@ -72,14 +75,7 @@ main {
 .filter {
     width: 11em;
 }
-// .MuiSelect-root.MuiSelect-select.MuiSelect-selectMenu.MuiInputBase-input.MuiInput-input {
-//     background-color: #f00;
-//     margin-bottom: 1em;
-// }
 
-// .MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-formControl.MuiInput-formControl {
-//     background-color: #ff0;
-// }
 // Cards section
 .cards-container {
     display: flex;
@@ -90,7 +86,7 @@ main {
 
 .cards {
     background-color: $white;
-    border-radius: 5px;
+    border-radius: $radius;
     width: 16em;
     margin: 1em 1.5em;
     box-shadow: $shadow;
@@ -113,5 +109,31 @@ main {
                 font-weight: 300;
             }
         }
+    }
+}
+
+// Details Page
+.details-page {
+    padding: 4em 6em;
+    display: flex;
+    flex-direction: column;
+}
+.back-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.75em 2em 0.75em 1.75em;
+    border: none;
+    background-color: $white;
+    box-shadow: $shadow;
+    border-radius: $radius;
+    width: max-content;
+    .icons {
+        height: 1.5em;
+        margin-right: 0.8em;
+    }
+    p {
+        font-size: 16px;
+        font-weight: 300;
+        margin: -0.2em;
     }
 }
