@@ -22,7 +22,7 @@ export default function AllCountries() {
                                     key={data.name}
                                     flag={data.flag}
                                     name={data.name}
-                                    population={data.population}
+                                    population={data.population.toLocaleString()}
                                     region={data.region}
                                     capital={data.capital}
                                 />

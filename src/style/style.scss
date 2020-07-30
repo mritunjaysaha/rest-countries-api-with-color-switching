@@ -176,14 +176,16 @@ body {
             display: flex;
             flex-direction: row;
             align-items: center;
+
             .border-countries-btn {
                 background-color: $white;
                 border: none;
                 border-radius: $radius;
                 box-shadow: $shadow;
-                width: 6em;
+                width: max-content;
                 font-size: 12px;
                 padding: 0.5em 2em;
+                margin-top: 1em;
                 margin-right: 1em;
             }
         }

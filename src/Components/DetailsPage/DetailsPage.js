@@ -19,13 +19,12 @@ export default function DetailsPage(props) {
     useEffect(
         function () {
             if (data) {
-                console.log(data[0]);
                 const countryDetails = (
                     <CountryDetails
                         flag={data[0].flag}
                         name={data[0].name}
                         nativeName={data[0].nativeName}
-                        population={data[0].population}
+                        population={data[0].population.toLocaleString()}
                         region={data[0].region}
                         subRegion={data[0].subregion}
                         capital={data[0].capital}
