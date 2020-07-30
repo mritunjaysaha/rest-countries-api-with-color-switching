@@ -8,7 +8,7 @@ export default function CountryCards(props) {
                 navigate("/details", { state: { name: `${props.name}` } });
             }}
         >
-            <div>
+            <div className="cards-flag">
                 <img src={props.flag} alt={props.name} />
             </div>
             <div className="cards-contents">

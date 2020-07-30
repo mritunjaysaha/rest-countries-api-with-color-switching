@@ -43,7 +43,7 @@ export default function CountryDetails(props) {
                 </div>
                 <div className="border-countries">
                     <p>
-                        Border Countries:{" "}
+                        Border Countries:&nbsp;&nbsp;
                         <span>
                             <BorderCountries countries={props.border} />
                         </span>

@@ -31,7 +31,7 @@ body {
     justify-content: space-between;
     background-color: $white;
     box-shadow: $shadow;
-    padding: 0 4em;
+    padding: 0 4.5em;
 
     .theme-switch {
         display: flex;
@@ -48,14 +48,14 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 3em 4em 2em 4em;
+    margin: 3em 4.5em 2em 4.5em;
 }
 .searchandfilter {
     display: flex;
     flex-direction: row;
     align-items: center;
     background-color: $white;
-    height: 3em;
+    height: 4em;
     box-shadow: $shadow;
     border-radius: $radius;
     .search-icon {
@@ -68,12 +68,17 @@ body {
     }
 }
 .search {
-    width: 30em;
+    width: 32em;
 }
 .filter {
-    width: 11em;
+    width: 12em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.select {
+    width: 10em;
+}
 // Cards section
 .cards-container {
     display: flex;
@@ -86,12 +91,16 @@ body {
     background-color: $white;
     border-radius: $radius;
     width: 20em;
-    margin: 1em 2em;
-
+    height: 26em;
+    margin: 1em 2em 2em 2em;
     box-shadow: $shadow;
+    .cards-flag {
+        width: inherit;
+        height: 12em;
+    }
     img {
-        width: 100%;
-        height: 50%;
+        width: 20em;
+        height: inherit;
     }
 
     .cards-contents {
@@ -151,7 +160,7 @@ body {
 
     .country-contents-container {
         width: calc((100vw / 2));
-        padding: 2em 0 0 4em;
+        padding: 1em 0 1em 4em;
 
         h3 {
             font-size: 32px !important;
@@ -161,7 +170,22 @@ body {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            // width: max-content;
+        }
+
+        .border-countries {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .border-countries-btn {
+                background-color: $white;
+                border: none;
+                border-radius: $radius;
+                box-shadow: $shadow;
+                width: 6em;
+                font-size: 12px;
+                padding: 0.5em 2em;
+                margin-right: 1em;
+            }
         }
     }
 }

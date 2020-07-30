@@ -21,7 +21,7 @@ export default function Filter(props) {
 
     return (
         <div className="searchandfilter filter">
-            <FormControl className={classes.formControl}>
+            <FormControl className="select">
                 <InputLabel id="demo-simple-select-helper-label">
                     Filter by Region
                 </InputLabel>
