@@ -34,6 +34,10 @@ body {
   padding: 0 4.5em;
 }
 
+.navbar h3 {
+  font-size: 1.5em;
+}
+
 .navbar .theme-switch {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,6 +50,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 800;
+  font-size: 14px;
 }
 
 .icons {

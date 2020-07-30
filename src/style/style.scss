@@ -32,12 +32,15 @@ body {
     background-color: $white;
     box-shadow: $shadow;
     padding: 0 4.5em;
-
+    h3 {
+        font-size: 1.5em;
+    }
     .theme-switch {
         display: flex;
         flex-direction: row;
         align-items: center;
         font-weight: 800;
+        font-size: 14px;
     }
 }
 .icons {
