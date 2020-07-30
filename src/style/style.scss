@@ -98,6 +98,7 @@ body {
     height: 26em;
     margin: 1em 2em 2em 2em;
     box-shadow: $shadow;
+    cursor: pointer;
     .cards-flag {
         width: inherit;
         height: 12em;
@@ -140,6 +141,7 @@ body {
     box-shadow: $shadow;
     border-radius: $radius;
     width: max-content;
+    cursor: pointer;
     .icons {
         height: 1.5em;
         margin-right: 0.8em;
@@ -164,10 +166,10 @@ body {
 
     .country-contents-container {
         width: calc((100vw / 2));
-        padding: 1em 0 1em 4em;
+        padding: 0 0 0 4em;
 
         h3 {
-            font-size: 32px !important;
+            font-size: 24px !important;
         }
 
         .country-details-contents {
@@ -191,6 +193,10 @@ body {
                 padding: 0.5em 2em;
                 margin-top: 1em;
                 margin-right: 1em;
+
+                &:focus {
+                    outline: none;
+                }
             }
         }
     }

@@ -146,6 +146,7 @@ body {
   margin: 1em 2em 2em 2em;
   -webkit-box-shadow: 0px 2px 10px #ccc;
           box-shadow: 0px 2px 10px #ccc;
+  cursor: pointer;
 }
 
 .cards .cards-flag {
@@ -204,6 +205,7 @@ body {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  cursor: pointer;
 }
 
 .back-btn .icons {
@@ -236,11 +238,11 @@ body {
 
 .country-details .country-contents-container {
   width: calc((100vw / 2));
-  padding: 1em 0 1em 4em;
+  padding: 0 0 0 4em;
 }
 
 .country-details .country-contents-container h3 {
-  font-size: 32px !important;
+  font-size: 24px !important;
 }
 
 .country-details .country-contents-container .country-details-contents {
@@ -282,5 +284,9 @@ body {
   padding: 0.5em 2em;
   margin-top: 1em;
   margin-right: 1em;
+}
+
+.country-details .country-contents-container .border-countries .border-countries-btn:focus {
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */
