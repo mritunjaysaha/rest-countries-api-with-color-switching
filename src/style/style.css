@@ -10,12 +10,8 @@ body {
   background: #fafafa;
   margin: 0;
   color: #111517;
-  font-family: "Nunito Sans";
-  font-weight: 14px;
-}
-
-main {
-  margin: 0 5%;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
 }
 
 .navbar {
@@ -35,7 +31,7 @@ main {
   background-color: white;
   -webkit-box-shadow: 0px 2px 10px #ccc;
           box-shadow: 0px 2px 10px #ccc;
-  padding: 0 8%;
+  padding: 0 4em;
 }
 
 .navbar .theme-switch {
@@ -69,7 +65,7 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 3em 3.2em 2em 3.2em;
+  margin: 3em 4em 2em 4em;
 }
 
 .searchandfilter {
@@ -126,8 +122,8 @@ main {
 .cards {
   background-color: white;
   border-radius: 5px;
-  width: 16em;
-  margin: 1em 1.5em;
+  width: 20em;
+  margin: 1em 2em;
   -webkit-box-shadow: 0px 2px 10px #ccc;
           box-shadow: 0px 2px 10px #ccc;
 }
@@ -138,25 +134,26 @@ main {
 }
 
 .cards .cards-contents {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 14px;
   padding: 0 1em 1em 1em;
 }
 
-.cards .cards-contents h3 {
+.cards-contents h3,
+.country-contents-container h3 {
   font-weight: 800;
 }
 
-.cards .cards-contents p {
+.cards-contents p,
+.country-contents-container p {
   font-weight: 600;
 }
 
-.cards .cards-contents p span {
+.cards-contents p span,
+.country-contents-container p span {
   font-weight: 300;
 }
 
 .details-page {
-  padding: 4em 6em;
+  padding: 4em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -190,8 +187,47 @@ main {
 }
 
 .back-btn p {
-  font-size: 16px;
   font-weight: 300;
   margin: -0.2em;
+}
+
+.country-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 4em;
+  font-size: 16px;
+  width: calc(100vw - 8em);
+}
+
+.country-details .flag {
+  width: 40%;
+  height: inherit;
+}
+
+.country-details .country-contents-container {
+  width: calc((100vw / 2));
+  padding: 2em 0 0 4em;
+}
+
+.country-details .country-contents-container h3 {
+  font-size: 32px !important;
+}
+
+.country-details .country-contents-container .country-details-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=style.css.map */

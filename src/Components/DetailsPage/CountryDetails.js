@@ -4,12 +4,10 @@ import BorderCountries from "./BorderCountries";
 export default function CountryDetails(props) {
     return (
         <div className="country-details">
-            <div className="flag">
-                <img src={props.flag} alt="" />
-            </div>
-            <div className="contents-container">
-                <h3>{props.name}</h3>
-                <div className="contents">
+            <img className="flag" src={props.flag} alt="" />
+            <div className="country-contents-container">
+                <h3 className="country-name">{props.name}</h3>
+                <div className="country-details-contents">
                     <div className="contents-left">
                         <p>
                             Native Name: <span>{props.nativeName}</span>
@@ -45,7 +43,6 @@ export default function CountryDetails(props) {
                 </div>
                 <div className="border-countries">
                     <p>
-                        {console.log("borders", props.border)}
                         Border Countries:{" "}
                         <span>
                             <BorderCountries countries={props.border} />

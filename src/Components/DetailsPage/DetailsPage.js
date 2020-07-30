@@ -19,6 +19,7 @@ export default function DetailsPage(props) {
     useEffect(
         function () {
             if (data) {
+                console.log(data[0]);
                 const countryDetails = (
                     <CountryDetails
                         flag={data[0].flag}

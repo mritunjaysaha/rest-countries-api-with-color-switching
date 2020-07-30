@@ -8,6 +8,7 @@ $lightModeBackground: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%); //dark mode text and light mode elements
 $shadow: 0px 2px 10px #ccc;
 $radius: 5px;
+
 *,
 *::after,
 *::before {
@@ -18,13 +19,10 @@ body {
     background: $lightModeBackground;
     margin: 0;
     color: $lightModeText;
-    font-family: "Nunito Sans";
-    font-weight: 14px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
 }
 
-main {
-    margin: 0 5%;
-}
 // navbar section
 .navbar {
     display: flex;
@@ -33,7 +31,7 @@ main {
     justify-content: space-between;
     background-color: $white;
     box-shadow: $shadow;
-    padding: 0 8%;
+    padding: 0 4em;
 
     .theme-switch {
         display: flex;
@@ -50,7 +48,7 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 3em 3.2em 2em 3.2em;
+    margin: 3em 4em 2em 4em;
 }
 .searchandfilter {
     display: flex;
@@ -87,34 +85,36 @@ main {
 .cards {
     background-color: $white;
     border-radius: $radius;
-    width: 16em;
-    margin: 1em 1.5em;
+    width: 20em;
+    margin: 1em 2em;
+
     box-shadow: $shadow;
     img {
         width: 100%;
         height: 50%;
     }
+
     .cards-contents {
-        font-family: "Nunito Sans", sans-serif;
-        font-size: 14px;
         padding: 0 1em 1em 1em;
-
-        h3 {
-            font-weight: 800;
-        }
-        p {
-            font-weight: 600;
-
-            span {
-                font-weight: 300;
-            }
-        }
     }
 }
 
+.cards-contents,
+.country-contents-container {
+    h3 {
+        font-weight: 800;
+    }
+    p {
+        font-weight: 600;
+
+        span {
+            font-weight: 300;
+        }
+    }
+}
 // Details Page
 .details-page {
-    padding: 4em 6em;
+    padding: 4em;
     display: flex;
     flex-direction: column;
 }
@@ -132,8 +132,36 @@ main {
         margin-right: 0.8em;
     }
     p {
-        font-size: 16px;
+        // font-size: 16px;
         font-weight: 300;
         margin: -0.2em;
+    }
+}
+
+.country-details {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4em;
+    font-size: 16px;
+    width: calc(100vw - 8em);
+    .flag {
+        width: 40%;
+        height: inherit;
+    }
+
+    .country-contents-container {
+        width: calc((100vw / 2));
+        padding: 2em 0 0 4em;
+
+        h3 {
+            font-size: 32px !important;
+        }
+
+        .country-details-contents {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            // width: max-content;
+        }
     }
 }
