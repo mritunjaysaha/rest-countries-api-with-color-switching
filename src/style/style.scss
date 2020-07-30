@@ -158,14 +158,17 @@ body {
     margin-top: 4em;
     font-size: 16px;
     width: calc(100vw - 8em);
+    height: 50vh;
+
     .flag {
         width: 40%;
-        height: 120%;
+        height: 100%;
     }
 
     .country-contents-container {
         width: calc((100vw / 2));
         padding: 0 0 0 4em;
+        height: max-content !important;
 
         h3 {
             font-size: 24px !important;

@@ -16,7 +16,11 @@ export default function BorderCountries(props) {
                     data.push(processedResponse.name);
                     console.log(processedResponse.name);
                 }
-                setCountryNames(data);
+                if (data.length > 0) {
+                    setCountryNames(data);
+                } else {
+                    setCountryNames(["none"]);
+                }
             }
 
             getNames(props.countries);

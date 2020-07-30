@@ -229,16 +229,20 @@ body {
   margin-top: 4em;
   font-size: 16px;
   width: calc(100vw - 8em);
+  height: 50vh;
 }
 
 .country-details .flag {
   width: 40%;
-  height: 120%;
+  height: 100%;
 }
 
 .country-details .country-contents-container {
   width: calc((100vw / 2));
   padding: 0 0 0 4em;
+  height: -webkit-max-content !important;
+  height: -moz-max-content !important;
+  height: max-content !important;
 }
 
 .country-details .country-contents-container h3 {
