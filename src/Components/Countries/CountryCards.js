@@ -5,7 +5,7 @@ export default function CountryCards(props) {
         <div
             className="cards"
             onClick={() => {
-                navigate("/details");
+                navigate("/details", { state: { name: `${props.name}` } });
             }}
         >
             <div>
