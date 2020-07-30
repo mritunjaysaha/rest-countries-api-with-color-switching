@@ -14,6 +14,7 @@ export default function BorderCountries(props) {
                     );
                     const processedResponse = await response.json();
                     data.push(processedResponse.name);
+                    console.log(processedResponse.name);
                 }
                 setCountryNames(data);
             }

@@ -13,7 +13,6 @@ export default function useFilteredData(region) {
                 const processedResponse = await response.json();
                 setCountries(processedResponse);
                 setError(false);
-                console.log("region", processedResponse);
             }
 
             getCountries();

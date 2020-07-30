@@ -11,7 +11,6 @@ export default function useCountryDetails(country = "India") {
                     `https://restcountries.eu/rest/v2/name/${country}?fullText=true`
                 );
                 const processedResponse = await response.json();
-                console.log(processedResponse);
                 setDetails(processedResponse);
                 setError(false);
             }

@@ -9,7 +9,6 @@ export default function DetailsPage(props) {
     useEffect(
         function () {
             if (error) {
-                console.log("here");
                 setData(details);
             }
         },
