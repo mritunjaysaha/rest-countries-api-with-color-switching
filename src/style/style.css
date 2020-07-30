@@ -233,7 +233,7 @@ body {
 
 .country-details .flag {
   width: 40%;
-  height: inherit;
+  height: 120%;
 }
 
 .country-details .country-contents-container {
