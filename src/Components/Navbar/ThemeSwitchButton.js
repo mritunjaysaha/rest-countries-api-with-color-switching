@@ -8,7 +8,6 @@ export default function ThemeSwitchButton() {
 
     body.classList.add("theme-light");
     function handleTheme() {
-        console.log("next", nextTheme);
         if (nextTheme === "theme-light") {
             // dark theme
             body.classList.remove("theme-light");

@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BorderCountries from "./BorderCountries";
 
 export default function CountryDetails(props) {
+    const languages = props.languages;
+    const [lang, setLang] = useState();
+    useEffect(
+        function () {
+            let str = "";
+            for (let i = 0; i < languages.length; i++) {
+                if (i !== languages.length - 1) {
+                    str += languages[i].name + ", ";
+                } else {
+                    str += languages[i].name;
+                }
+            }
+            setLang(str);
+        },
+        [languages]
+    );
     return (
         <div className="country-details">
             <img className="flag" src={props.flag} alt="" />
@@ -37,12 +53,7 @@ export default function CountryDetails(props) {
                             <span>{props.currencies[0].name || "none"}</span>
                         </p>
                         <p>
-                            Languages:{" "}
-                            <span>
-                                {props.languages.map(
-                                    (lang) => lang.name + " "
-                                ) || "none"}
-                            </span>
+                            Languages: <span>{lang}</span>
                         </p>
                     </div>
                 </div>

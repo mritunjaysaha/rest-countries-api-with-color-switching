@@ -17,7 +17,6 @@ export default function BorderCountries(props) {
                     if (borderCountries[i] === processedResponse.alpha3Code) {
                         data.push(processedResponse.name);
                     }
-                    console.log(processedResponse);
                 }
                 if (data.length > 0) {
                     setCountryNames(data);
