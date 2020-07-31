@@ -8,6 +8,9 @@ $lightModeBackground: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%); //dark mode text and light mode elements
 $shadow: 0px 2px 10px #ccc;
 $radius: 5px;
+$background: hsl(0, 0%, 98%);
+$elements: hsl(0, 0%, 100%);
+$text: hsl(200, 15%, 8%);
 
 *,
 *::after,
@@ -15,10 +18,22 @@ $radius: 5px;
     box-sizing: border-box;
 }
 
+// .light {
+//     $background: $lightModeBackground;
+//     $elements: $white;
+//     $text: $lightModeText;
+// }
+
+// .dark {
+//     $background: $darkModeBackground;
+//     $elements: $darkModeElements;
+//     $text: $white;
+// }
+
 body {
-    background: $lightModeBackground;
+    // background: $background;
     margin: 0;
-    color: $lightModeText;
+    color: $text;
     font-family: "Nunito Sans", sans-serif;
     font-size: 14px;
 }
@@ -31,7 +46,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: $white;
+    background-color: $background;
     box-shadow: $shadow;
     padding: 0 4.5em;
     h3 {
@@ -43,6 +58,7 @@ body {
         align-items: center;
         font-weight: 800;
         font-size: 14px;
+        cursor: pointer;
     }
 }
 .icons {
@@ -60,7 +76,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: $white;
+    background-color: $elements;
     height: 4em;
     box-shadow: $shadow;
     border-radius: $radius;
@@ -146,7 +162,7 @@ body {
     align-items: center;
     padding: 0.75em 2em 0.75em 1.75em;
     border: none;
-    background-color: $white;
+    background-color: $background;
     box-shadow: $shadow;
     border-radius: $radius;
     width: max-content;
