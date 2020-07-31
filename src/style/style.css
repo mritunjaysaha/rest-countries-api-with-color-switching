@@ -96,6 +96,7 @@ body {
 }
 
 .searchandfilter .search-icon {
+  height: 1.5em;
   margin-left: 1em;
 }
 
@@ -309,7 +310,7 @@ body {
     *   NAVBAR SECTION
     */
   .navbar {
-    padding: 2em;
+    padding: 1em 2em;
   }
   .navbar h3 {
     font-size: 14px;
@@ -320,6 +321,81 @@ body {
   /*
     *   HOME PAGE SECTION
     */
+  /*
+    *   SEARCH AND FILTER
+    */
+  .search-filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 1em;
+  }
+  .searchandfilter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .searchandfilter .search-icon {
+    margin-left: 2em;
+  }
+  .searchandfilter input {
+    margin-left: 1.5em;
+  }
+  .search {
+    width: 90%;
+    margin-top: 2em;
+    margin-bottom: 4em;
+  }
+  .filter {
+    width: 12em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .select {
+    width: 10em;
+  }
+  /*
+    *   CARDS SECTION
+    */
+  .cards-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cards {
+    width: 18em;
+  }
+  .cards .cards-flag {
+    height: 12em;
+  }
+  .cards img {
+    width: inherit;
+    height: inherit;
+  }
   /*
     *   DETAILS PAGE SECTION
     */
