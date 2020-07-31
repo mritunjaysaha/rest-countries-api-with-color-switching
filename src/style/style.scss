@@ -23,7 +23,9 @@ body {
     font-size: 14px;
 }
 
-// navbar section
+/*
+    *   NAVBAR SECTION
+    */
 .navbar {
     display: flex;
     flex-direction: row;
@@ -211,6 +213,21 @@ body {
 }
 
 @media screen and (max-width: 992px) {
+    $padding: 2em;
+
+    /*
+    *   NAVBAR SECTION
+    */
+    .navbar {
+        padding: $padding;
+
+        h3 {
+            font-size: 14px;
+        }
+        .theme-switch {
+            font-weight: 600;
+        }
+    }
     /*
     *   HOME PAGE SECTION
     */
@@ -220,14 +237,14 @@ body {
     */
 
     .details-page {
-        padding: 2em;
+        padding: $padding;
         margin: 0 auto;
     }
     .country-details {
         flex-direction: column;
         width: 100%;
         height: max-content;
-        margin-top: 4em;
+        margin-top: 3em;
 
         .flag {
             width: 100%;

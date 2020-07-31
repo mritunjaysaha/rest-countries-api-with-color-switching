@@ -14,6 +14,9 @@ body {
   font-size: 14px;
 }
 
+/*
+    *   NAVBAR SECTION
+    */
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -303,6 +306,18 @@ body {
 
 @media screen and (max-width: 992px) {
   /*
+    *   NAVBAR SECTION
+    */
+  .navbar {
+    padding: 2em;
+  }
+  .navbar h3 {
+    font-size: 14px;
+  }
+  .navbar .theme-switch {
+    font-weight: 600;
+  }
+  /*
     *   HOME PAGE SECTION
     */
   /*
@@ -321,7 +336,7 @@ body {
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
-    margin-top: 4em;
+    margin-top: 3em;
   }
   .country-details .flag {
     width: 100%;
