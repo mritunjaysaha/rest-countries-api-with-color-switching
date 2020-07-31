@@ -5,7 +5,7 @@ import "../../style/style.css";
 
 export default function HomePage() {
     return (
-        <main>
+        <main className="main">
             <AllCountries />
         </main>
     );

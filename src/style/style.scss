@@ -6,11 +6,8 @@ $lightModeText: hsl(200, 15%, 8%);
 $lightModeInput: hsl(0, 0%, 52%);
 $lightModeBackground: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%); //dark mode text and light mode elements
-$shadow: 0px 2px 10px #ccc;
+$shadow: 0px 2px 10px #aaa;
 $radius: 5px;
-$background: hsl(0, 0%, 98%);
-$elements: hsl(0, 0%, 100%);
-$text: hsl(200, 15%, 8%);
 
 *,
 *::after,
@@ -18,24 +15,49 @@ $text: hsl(200, 15%, 8%);
     box-sizing: border-box;
 }
 
-// .light {
-//     $background: $lightModeBackground;
-//     $elements: $white;
-//     $text: $lightModeText;
-// }
+$themes: (
+    light: (
+        backgroundColor: $lightModeBackground,
+        textColor: $lightModeText,
+        elementsColor: $white,
+    ),
+    dark: (
+        backgroundColor: $darkModeBackground,
+        textColor: $white,
+        elementsColor: "#000",
+    ),
+);
 
-// .dark {
-//     $background: $darkModeBackground;
-//     $elements: $darkModeElements;
-//     $text: $white;
-// }
+@mixin themify($themes: $themes) {
+    @each $theme, $map in $themes {
+        .theme-#{$theme} & {
+            $theme-map: () !global;
+
+            @each $key, $submap in $map {
+                $value: map-get(map-get($themes, $theme), "#{$key}");
+                $theme-map: map-merge(
+                    $theme-map,
+                    (
+                        $key: $value,
+                    )
+                ) !global;
+            }
+
+            @content;
+            $theme-map: null !global;
+        }
+    }
+}
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}
 
 body {
-    // background: $background;
     margin: 0;
-    color: $text;
     font-family: "Nunito Sans", sans-serif;
     font-size: 14px;
+    background-color: $lightModeBackground;
+    color: $lightModeText;
 }
 
 /*
@@ -46,9 +68,9 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: $background;
     box-shadow: $shadow;
     padding: 0 4.5em;
+    z-index: 10;
     h3 {
         font-size: 1.5em;
     }
@@ -59,6 +81,10 @@ body {
         font-weight: 800;
         font-size: 14px;
         cursor: pointer;
+    }
+    @include themify($themes) {
+        color: themed("textColor");
+        background-color: themed("elements");
     }
 }
 .icons {
@@ -76,10 +102,11 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: $elements;
+    background-color: $white;
     height: 4em;
     box-shadow: $shadow;
     border-radius: $radius;
+
     .search-icon {
         height: 1.5em;
         margin-left: 1em;
@@ -112,15 +139,17 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    padding: 0 2em;
 }
 
 .cards {
-    background-color: $white;
     border-radius: $radius;
     width: 20em;
     height: 26em;
-    margin: 1em 2em 2em 2em;
+    margin: 1em 0 2em 0;
     box-shadow: $shadow;
+    background-color: $white;
+    color: $lightModeText;
     cursor: pointer;
     .cards-flag {
         width: inherit;
@@ -162,7 +191,7 @@ body {
     align-items: center;
     padding: 0.75em 2em 0.75em 1.75em;
     border: none;
-    background-color: $background;
+    background-color: $white;
     box-shadow: $shadow;
     border-radius: $radius;
     width: max-content;
