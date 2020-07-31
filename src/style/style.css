@@ -348,9 +348,6 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .searchandfilter .search-icon {
     margin-left: 2em;
@@ -360,8 +357,7 @@ body {
   }
   .search {
     width: 90%;
-    margin-top: 2em;
-    margin-bottom: 4em;
+    margin: 2em 1em 4em 1em;
   }
   .filter {
     width: 12em;
@@ -374,6 +370,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-left: 1em;
   }
   .select {
     width: 10em;
