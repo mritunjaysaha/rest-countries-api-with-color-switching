@@ -153,14 +153,15 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 0 2em;
+    // width: calc(100vw - 8em);
+    margin: 0 auto;
 }
 
 .cards {
     border-radius: $radius;
     width: 20em;
     height: 26em;
-    margin: 1em 0 2em 0;
+    margin: 1em 1em 2em 1em;
     box-shadow: $shadow;
 
     cursor: pointer;
