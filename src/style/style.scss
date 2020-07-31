@@ -69,6 +69,10 @@ body {
         margin-left: 1em;
         border: none;
         width: 85%;
+
+        &:focus {
+            outline: none;
+        }
     }
 }
 .search {
@@ -126,7 +130,9 @@ body {
         }
     }
 }
-// Details Page
+/*
+*   DETAILS PAGE SECTION
+*/
 .details-page {
     padding: 4em;
     display: flex;
@@ -171,7 +177,7 @@ body {
         height: max-content !important;
 
         h3 {
-            font-size: 24px !important;
+            font-size: 24px;
         }
 
         .country-details-contents {
@@ -199,6 +205,48 @@ body {
                 &:focus {
                     outline: none;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    /*
+    *   HOME PAGE SECTION
+    */
+
+    /*
+    *   DETAILS PAGE SECTION
+    */
+
+    .details-page {
+        padding: 2em;
+        margin: 0 auto;
+    }
+    .country-details {
+        flex-direction: column;
+        width: 100%;
+        height: max-content;
+        margin-top: 4em;
+
+        .flag {
+            width: 100%;
+            height: 30vh;
+        }
+
+        .country-contents-container {
+            width: 100%;
+            padding: 0;
+
+            h3 {
+                padding-top: 1em;
+            }
+            .contents-left,
+            .border-countries {
+                margin-top: -1em;
+            }
+            .country-details-contents {
+                flex-direction: column;
             }
         }
     }
