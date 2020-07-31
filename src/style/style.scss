@@ -162,16 +162,15 @@ body {
     height: 26em;
     margin: 1em 1em 2em 1em;
     box-shadow: $shadow;
-    z-index: 10;
     cursor: pointer;
     .cards-flag {
         width: inherit;
         height: 12em;
     }
     img {
+        border-radius: $radius;
         width: inherit;
         height: inherit;
-        z-index: -10;
     }
 
     .cards-contents {

@@ -195,7 +195,6 @@ body {
   margin: 1em 1em 2em 1em;
   -webkit-box-shadow: 0px 2px 10px #aaa;
           box-shadow: 0px 2px 10px #aaa;
-  z-index: 10;
   cursor: pointer;
 }
 
@@ -205,9 +204,9 @@ body {
 }
 
 .cards img {
+  border-radius: 5px;
   width: inherit;
   height: inherit;
-  z-index: -10;
 }
 
 .cards .cards-contents {
