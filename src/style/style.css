@@ -403,6 +403,70 @@ body {
   outline: none;
 }
 
+/*
+*   LOADING SKELETON
+*/
+.loading-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: calc(100vw - 8em);
+  height: 50vh;
+  margin: 8em;
+}
+
+.loading-container .react-loading-skeleton.css-1vmnjpn-skeletonStyles-Skeleton {
+  width: 40%;
+  height: 100%;
+}
+
+.loading-container .contents-skeleton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc((100vw / 2));
+  margin-left: 4em;
+}
+
+.loading-container .contents-skeleton .name {
+  margin-bottom: 2em;
+}
+
+.loading-container .contents-skeleton .contents-container-skeleton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loading-container .contents-skeleton .contents-container-skeleton .contents-left,
+.loading-container .contents-skeleton .contents-container-skeleton .contents-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 @media screen and (max-width: 992px) {
   /*
     *   NAVBAR SECTION
@@ -525,6 +589,67 @@ body {
     margin-top: -1em;
   }
   .country-details .country-contents-container .country-details-contents {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  /*
+*   LOADING SKELETON
+*/
+  .loading-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90%;
+    height: 50vh;
+    margin: 2em;
+  }
+  .loading-container .flag-skeleton {
+    margin-bottom: 4em;
+  }
+  .loading-container .flag-skeleton span .react-loading-skeleton.css-1vmnjpn-skeletonStyles-Skeleton {
+    width: 90% !important;
+    height: 20em !important;
+  }
+  .loading-container .contents-skeleton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80%;
+    margin-left: 0;
+  }
+  .loading-container .contents-skeleton .name {
+    margin-bottom: 2em;
+  }
+  .loading-container .contents-skeleton .contents-container-skeleton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .loading-container .contents-skeleton .contents-container-skeleton .contents-left,
+  .loading-container .contents-skeleton .contents-container-skeleton .contents-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

@@ -293,6 +293,42 @@ body {
     }
 }
 
+/*
+*   LOADING SKELETON
+*/
+.loading-container {
+    display: flex;
+    flex-direction: row;
+    width: calc(100vw - 8em);
+    height: 50vh;
+    margin: 8em;
+    .react-loading-skeleton.css-1vmnjpn-skeletonStyles-Skeleton {
+        width: 40%;
+        height: 100%;
+    }
+    .contents-skeleton {
+        display: flex;
+        flex-direction: column;
+
+        width: calc((100vw / 2));
+        margin-left: 4em;
+        .name {
+            margin-bottom: 2em;
+        }
+        .contents-container-skeleton {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .contents-left,
+            .contents-right {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
 @media screen and (max-width: 992px) {
     $padding: 2em;
 
@@ -396,6 +432,49 @@ body {
             }
             .country-details-contents {
                 flex-direction: column;
+            }
+        }
+    }
+
+    /*
+*   LOADING SKELETON
+*/
+    .loading-container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 50vh;
+        margin: 2em;
+
+        .flag-skeleton {
+            span {
+                .react-loading-skeleton.css-1vmnjpn-skeletonStyles-Skeleton {
+                    width: 90% !important;
+                    height: 20em !important;
+                }
+            }
+            margin-bottom: 4em;
+        }
+        .contents-skeleton {
+            display: flex;
+            flex-direction: column;
+
+            width: 80%;
+            margin-left: 0;
+            .name {
+                margin-bottom: 2em;
+            }
+            .contents-container-skeleton {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                .contents-left,
+                .contents-right {
+                    display: flex;
+                    flex-direction: column;
+                }
             }
         }
     }
