@@ -184,16 +184,18 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  width: calc(100vw - 8em);
   margin: 0 auto;
 }
 
 .cards {
   border-radius: 5px;
-  width: 20em;
+  width: 18em;
   height: 26em;
   margin: 1em 1em 2em 1em;
   -webkit-box-shadow: 0px 2px 10px #aaa;
           box-shadow: 0px 2px 10px #aaa;
+  z-index: 10;
   cursor: pointer;
 }
 
@@ -203,8 +205,9 @@ body {
 }
 
 .cards img {
-  width: 20em;
+  width: inherit;
   height: inherit;
+  z-index: -10;
 }
 
 .cards .cards-contents {

@@ -105,7 +105,6 @@ body {
     flex-direction: row;
     align-items: center;
     height: 4em;
-
     border-radius: $radius;
     @include themify($themes) {
         background-color: themed("elementsColor");
@@ -153,25 +152,26 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    // width: calc(100vw - 8em);
+    width: calc(100vw - 8em);
     margin: 0 auto;
 }
 
 .cards {
     border-radius: $radius;
-    width: 20em;
+    width: 18em;
     height: 26em;
     margin: 1em 1em 2em 1em;
     box-shadow: $shadow;
-
+    z-index: 10;
     cursor: pointer;
     .cards-flag {
         width: inherit;
         height: 12em;
     }
     img {
-        width: 20em;
+        width: inherit;
         height: inherit;
+        z-index: -10;
     }
 
     .cards-contents {
