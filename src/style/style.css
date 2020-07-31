@@ -31,8 +31,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-shadow: 0px 2px 10px #aaa;
-          box-shadow: 0px 2px 10px #aaa;
   padding: 0 4.5em;
   z-index: 10;
 }
@@ -59,10 +57,14 @@ body {
 
 .theme-light .navbar {
   background-color: white;
+  -webkit-box-shadow: 0px 2px 10px #aaa;
+          box-shadow: 0px 2px 10px #aaa;
 }
 
 .theme-dark .navbar {
   background-color: #2b3945;
+  -webkit-box-shadow: 0px 2px 5px #222;
+          box-shadow: 0px 2px 5px #222;
 }
 
 .icons {
@@ -98,17 +100,19 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 4em;
-  -webkit-box-shadow: 0px 2px 10px #aaa;
-          box-shadow: 0px 2px 10px #aaa;
   border-radius: 5px;
 }
 
 .theme-light .searchandfilter {
   background-color: white;
+  -webkit-box-shadow: 0px 2px 10px #aaa;
+          box-shadow: 0px 2px 10px #aaa;
 }
 
 .theme-dark .searchandfilter {
   background-color: #2b3945;
+  -webkit-box-shadow: 0px 2px 5px #222;
+          box-shadow: 0px 2px 5px #222;
 }
 
 .searchandfilter .search-icon {
@@ -124,10 +128,12 @@ body {
 
 .theme-light .searchandfilter input {
   background-color: white;
+  color: #111517;
 }
 
 .theme-dark .searchandfilter input {
   background-color: #2b3945;
+  color: white;
 }
 
 .searchandfilter input:focus {
@@ -207,10 +213,14 @@ body {
 
 .theme-light .cards {
   background-color: white;
+  -webkit-box-shadow: 0px 2px 10px #aaa;
+          box-shadow: 0px 2px 10px #aaa;
 }
 
 .theme-dark .cards {
   background-color: #2b3945;
+  -webkit-box-shadow: 0px 2px 5px #222;
+          box-shadow: 0px 2px 5px #222;
 }
 
 .cards-contents h3,
@@ -251,8 +261,6 @@ body {
           align-items: center;
   padding: 0.75em 2em 0.75em 1.75em;
   border: none;
-  -webkit-box-shadow: 0px 2px 10px #aaa;
-          box-shadow: 0px 2px 10px #aaa;
   border-radius: 5px;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -272,10 +280,16 @@ body {
 
 .theme-light .back-btn {
   background-color: white;
+  -webkit-box-shadow: 0px 2px 10px #aaa;
+          box-shadow: 0px 2px 10px #aaa;
+  color: #111517;
 }
 
 .theme-dark .back-btn {
   background-color: #2b3945;
+  -webkit-box-shadow: 0px 2px 5px #222;
+          box-shadow: 0px 2px 5px #222;
+  color: white;
 }
 
 .country-details {
@@ -336,11 +350,8 @@ body {
 }
 
 .country-details .country-contents-container .border-countries .border-countries-btn {
-  background-color: white;
   border: none;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 2px 10px #aaa;
-          box-shadow: 0px 2px 10px #aaa;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -348,6 +359,20 @@ body {
   padding: 0.5em 2em;
   margin-top: 1em;
   margin-right: 1em;
+}
+
+.theme-light .country-details .country-contents-container .border-countries .border-countries-btn {
+  background-color: white;
+  -webkit-box-shadow: 0px 2px 10px #aaa;
+          box-shadow: 0px 2px 10px #aaa;
+  color: #111517;
+}
+
+.theme-dark .country-details .country-contents-container .border-countries .border-countries-btn {
+  background-color: #2b3945;
+  -webkit-box-shadow: 0px 2px 5px #222;
+          box-shadow: 0px 2px 5px #222;
+  color: white;
 }
 
 .country-details .country-contents-container .border-countries .border-countries-btn:focus {
