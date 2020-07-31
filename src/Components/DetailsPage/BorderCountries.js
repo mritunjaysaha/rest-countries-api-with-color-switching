@@ -13,8 +13,11 @@ export default function BorderCountries(props) {
                         `https://restcountries.eu/rest/v2/alpha/${borderCountries[i]}`
                     );
                     const processedResponse = await response.json();
-                    data.push(processedResponse.name);
-                    console.log(processedResponse.name);
+
+                    if (borderCountries[i] === processedResponse.alpha3Code) {
+                        data.push(processedResponse.name);
+                    }
+                    console.log(processedResponse);
                 }
                 if (data.length > 0) {
                     setCountryNames(data);

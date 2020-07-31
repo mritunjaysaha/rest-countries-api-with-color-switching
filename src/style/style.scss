@@ -125,6 +125,9 @@ body {
         &:focus {
             outline: none;
         }
+        &::placeholder {
+            color: $lightModeInput;
+        }
     }
 }
 .search {
@@ -135,6 +138,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.filter-label {
+    margin-top: -0.1em;
+    margin-left: 0.1em;
+    // @include themify($themes) {
+    //     color: themed("textColor");
+    // }
+    color: $lightModeInput;
 }
 .select {
     width: 10em;
