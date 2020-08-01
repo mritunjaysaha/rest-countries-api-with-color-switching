@@ -92,7 +92,7 @@ body {
     }
 
     @include respond(tablet) {
-        padding: 0 4em;
+        padding: 0 6vw;
         h3 {
             font-size: 14px;
         }
@@ -186,11 +186,8 @@ body {
     align-items: stretch;
 
     @include respond(mobile) {
-        // background-color: #f00;
-        // padding: 0 2em;
         display: flex;
         flex-direction: column;
-        // grid-gap: 0;
         align-items: center;
     }
 }
@@ -211,6 +208,10 @@ body {
         display: block;
         max-height: 24vh;
         align-items: stretch;
+
+        @include respond(tablet) {
+            max-height: max-content;
+        }
     }
     img {
         border-radius: $radius $radius 0 0;
