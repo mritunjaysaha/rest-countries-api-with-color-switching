@@ -44,6 +44,13 @@ body {
         box-shadow: $shadow-dark;
         color: $white;
     }
+
+    &.theme-dark
+        .MuiSelect-root.MuiSelect-select.MuiSelect-selectMenu.MuiInputBase-input.MuiInput-input {
+        &::before {
+            color: $white !important;
+        }
+    }
 }
 
 /*

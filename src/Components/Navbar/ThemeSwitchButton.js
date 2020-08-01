@@ -1,24 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import UilMoon from "@iconscout/react-unicons/icons/uil-moon";
 
 export default function ThemeSwitchButton() {
-    const [nextTheme, setNextTheme] = useState("theme-light");
+    const [currentTheme, setCurrentTheme] = useState();
+
     const [mode, setMode] = useState("Dark");
     const body = document.querySelector("body");
 
+    useEffect(
+        function () {
+            const theme = localStorage.getItem("theme");
+            body.classList.add(theme);
+        },
+        [body.classList]
+    );
+
     body.classList.add("theme-light");
     function handleTheme() {
-        if (nextTheme === "theme-light") {
+        if (currentTheme === "theme-light") {
             // dark theme
             body.classList.remove("theme-light");
             body.classList.add("theme-dark");
-            setNextTheme("theme-dark");
+            localStorage.setItem("theme", "theme-dark");
+            setCurrentTheme("theme-dark");
             setMode("Light");
         } else {
             // light theme
             body.classList.add("theme-light");
             body.classList.remove("theme-dark");
-            setNextTheme("theme-light");
+            localStorage.setItem("theme", "theme-light");
+
+            setCurrentTheme("theme-light");
             setMode("Dark");
         }
     }
