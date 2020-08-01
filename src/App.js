@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import HomePage from "./Components/HomePage/HomePage";
-// import DetailsPage from "./Components/DetailsPage/DetailsPage";
+
 import LoadingSkeletonDetailsPage from "./Components/DetailsPage/LoadingSkeletonDetailsPage";
 import { Router } from "@reach/router";
 import Navbar from "../src/Components/Navbar/Navbar";
