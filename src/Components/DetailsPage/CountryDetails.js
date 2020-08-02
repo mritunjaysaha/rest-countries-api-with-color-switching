@@ -1,5 +1,6 @@
 import React, { useEffect, useState, lazy, Suspense } from "react";
 import LoadingSkeletonBorderCountries from "./LoadingSkeletonBorderCountries";
+
 const BorderCountries = lazy(() => import("./BorderCountries"));
 
 export default function CountryDetails(props) {

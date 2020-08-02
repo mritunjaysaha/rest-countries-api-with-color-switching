@@ -4,6 +4,7 @@ import useCountriesData from "../CustomHooks/countriesData";
 import useFilteredData from "../CustomHooks/filterData";
 import Search from "../SearchAndFilter/Search";
 import Filter from "../SearchAndFilter/Filter";
+
 export default function AllCountries() {
     const [country, setCountry] = useState();
     const [query, setQuery] = useState("");
@@ -28,15 +29,6 @@ export default function AllCountries() {
                                 />
                             );
                         })}
-                    </div>
-                );
-
-                setCountry(country);
-            } else {
-                const country = (
-                    <div className="not-found">
-                        <p>No match found</p>
-                        <div className="not-found-illustration"></div>
                     </div>
                 );
 

@@ -78,6 +78,10 @@ body {
             $darkModeElements
         );
     }
+
+    &.theme-dark .loading-container .cards {
+        background-color: $darkModeBackground !important;
+    }
 }
 
 /*
@@ -214,10 +218,6 @@ body {
     background-color: $white;
     cursor: pointer;
 
-    @include respond(mobile) {
-        width: 80%;
-        margin: 1em 0;
-    }
     .cards-flag {
         width: 100%;
         display: block;
@@ -237,6 +237,11 @@ body {
 
     .cards-contents {
         padding: 0 1em 1em 1em;
+    }
+
+    @include respond(mobile) {
+        width: 80%;
+        margin: 1em 0;
     }
 }
 
@@ -324,7 +329,6 @@ body {
     margin-top: 4em;
     font-size: 16px;
     width: calc(100vw - 8em);
-    // height: 50vh;
 
     @include respond(tablet) {
         flex-direction: column;
@@ -411,7 +415,7 @@ body {
     justify-content: space-evenly;
 
     .cards {
-        background-color: $darkModeBackground !important;
+        background-color: $lightModeBackground !important;
         box-shadow: none !important;
 
         .cards-contents {
