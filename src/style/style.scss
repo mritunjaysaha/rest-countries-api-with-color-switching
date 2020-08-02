@@ -81,16 +81,29 @@ body {
     &.theme-dark .loading-container.cards-container {
         .cards {
             background-color: $darkModeBackground;
-            .css-1vmnjpn-skeletonStyles-Skeleton,
-            .css-k31kfd-skeletonStyles-Skeleton {
-                background-color: $darkModeElements;
-                background-image: linear-gradient(
-                    90deg,
-                    $darkModeElements,
-                    hsl(207, 26%, 30%),
-                    $darkModeElements
-                );
-            }
+            // .css-1vmnjpn-skeletonStyles-Skeleton,
+            // .css-k31kfd-skeletonStyles-Skeleton {
+            //     background-color: $darkModeElements;
+            //     background-image: linear-gradient(
+            //         90deg,
+            //         $darkModeElements,
+            //         hsl(207, 26%, 30%),
+            //         $darkModeElements
+            //     );
+            // }
+        }
+    }
+
+    &.theme-dark .loading-container {
+        .css-1vmnjpn-skeletonStyles-Skeleton,
+        .css-k31kfd-skeletonStyles-Skeleton {
+            background-color: $darkModeElements;
+            background-image: linear-gradient(
+                90deg,
+                $darkModeElements,
+                hsl(207, 26%, 30%),
+                $darkModeElements
+            );
         }
     }
 
