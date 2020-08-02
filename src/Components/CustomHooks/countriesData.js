@@ -12,8 +12,13 @@ export default function useCountriesData(query) {
                     `https://restcountries.eu/rest/v2/${text}`
                 );
                 const processedResponse = await response.json();
-                setCountries(processedResponse);
-                setError(false);
+
+                if (processedResponse.status !== 404) {
+                    setCountries(processedResponse);
+                    setError(false);
+                } else {
+                    setError(true);
+                }
             }
 
             getCountries();

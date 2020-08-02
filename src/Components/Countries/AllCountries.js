@@ -32,6 +32,15 @@ export default function AllCountries() {
                 );
 
                 setCountry(country);
+            } else {
+                const country = (
+                    <div className="not-found">
+                        <p>No match found</p>
+                        <div className="not-found-illustration"></div>
+                    </div>
+                );
+
+                setCountry(country);
             }
         },
         [allCountries, allError, flag]

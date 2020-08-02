@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import UilMoon from "@iconscout/react-unicons/icons/uil-moon";
 
 export default function ThemeSwitchButton() {
-    const [currentTheme, setCurrentTheme] = useState();
+    const [currentTheme, setCurrentTheme] = useState("theme-light");
 
     const [mode, setMode] = useState("Dark");
     const body = document.querySelector("body");
@@ -10,6 +10,11 @@ export default function ThemeSwitchButton() {
     useEffect(
         function () {
             const theme = localStorage.getItem("theme");
+            if (theme !== null) {
+                setCurrentTheme(theme);
+            } else {
+                setCurrentTheme("theme-dark");
+            }
             body.classList.add(theme);
         },
         [body.classList]

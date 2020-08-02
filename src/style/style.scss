@@ -45,6 +45,7 @@ body {
 
     &.theme-dark .searchandfilter > input {
         background-color: $darkModeElements;
+        color: $white;
     }
     &.theme-dark .cards,
     &.theme-dark .navbar,
@@ -239,10 +240,29 @@ body {
     }
 }
 /*
+*   NOT FOUND
+*/
+.not-found {
+    // background-color: #f00;
+    height: 70vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.not-found-illustration {
+    height: 60vh;
+    width: 100vw;
+    background-image: url("./svg/undraw.svg");
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+} /*
 *   DETAILS PAGE SECTION
 */
 .details-page {
-    padding: 4em;
+    padding: $padding-side-desktop;
     display: flex;
     flex-direction: column;
 
@@ -331,7 +351,7 @@ body {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-
+            padding-right: $padding-side-desktop;
             @include respond(tablet) {
                 flex-direction: column;
             }
