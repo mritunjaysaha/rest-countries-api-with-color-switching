@@ -66,8 +66,8 @@ body {
         color: #fff !important;
     }
 
-    &.theme-dark .loading-container .css-1vmnjpn-skeletonStyles-Skeleton,
-    &.theme-dark .loading-container .css-k31kfd-skeletonStyles-Skeleton,
+    // &.theme-dark .loading-container .css-1vmnjpn-skeletonStyles-Skeleton,
+    // &.theme-dark .loading-container .css-k31kfd-skeletonStyles-Skeleton,
     &.theme-dark
         .border-countries-loading-skeleton
         .css-1vmnjpn-skeletonStyles-Skeleton {
@@ -83,6 +83,16 @@ body {
     &.theme-dark .loading-container.cards-container {
         .cards {
             background-color: $darkModeBackground;
+            .css-1vmnjpn-skeletonStyles-Skeleton,
+            .css-k31kfd-skeletonStyles-Skeleton {
+                background-color: $darkModeElements;
+                background-image: linear-gradient(
+                    90deg,
+                    $darkModeElements,
+                    hsl(207, 26%, 30%),
+                    $darkModeElements
+                );
+            }
         }
     }
 
