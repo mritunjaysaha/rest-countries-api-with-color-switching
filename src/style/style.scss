@@ -99,44 +99,6 @@ body {
             );
         }
     }
-
-    &.theme-dark,
-    &.theme-dark .searchandfilter,
-    &.theme-dark .cards,
-    &.theme-dark .navbar,
-    &.theme-dark .searchandfilter,
-    &.theme-dark .MuiList-root.MuiMenu-list.MuiList-padding,
-    &.theme-dark .back-btn,
-    &.theme-dark
-        .country-contents-container
-        .border-countries
-        .border-countries-btn,
-    &.theme-dark
-        .MuiSelect-root.MuiSelect-select.MuiSelect-selectMenu.MuiInputBase-input.MuiInput-input,
-    &.theme-dark .loading-container .css-1vmnjpn-skeletonStyles-Skeleton,
-    &.theme-dark
-        .border-countries-loading-skeleton
-        .css-1vmnjpn-skeletonStyles-Skeleton,
-    &.theme-dark .loading-container .cards,
-    &.theme-dark .searchandfilter > input {
-        transition: 0.3s linear;
-    }
-}
-body,
-.searchandfilter,
-.cards,
-.navbar,
-.searchandfilter,
-.MuiList-root.MuiMenu-list.MuiList-padding,
-.back-btn,
-.country-contents-container .border-countries .border-countries-btn,
-.MuiSelect-root.MuiSelect-select.MuiSelect-selectMenu.MuiInputBase-input.MuiInput-input,
-.loading-container .css-1vmnjpn-skeletonStyles-Skeleton,
-.border-countries-loading-skeleton .css-1vmnjpn-skeletonStyles-Skeleton,
-.loading-container .cards,
-.searchandfilter > input {
-    transform-origin: bottom;
-    transition: 0.3s linear;
 }
 /*
     *   NAVBAR SECTION
