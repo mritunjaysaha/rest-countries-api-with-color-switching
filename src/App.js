@@ -12,7 +12,7 @@ function App() {
     return (
         <>
             <Navbar />
-            <Suspense fallback={<LoadingSkeletonHomePage />}>
+            {/* <Suspense fallback={<LoadingSkeletonHomePage />}>
                 <Router>
                     <HomePage exact path="/" />
                 </Router>
@@ -21,7 +21,11 @@ function App() {
                 <Router>
                     <DetailsPage path="/details" />
                 </Router>
-            </Suspense>
+            </Suspense> */}
+            <Router>
+                <LoadingSkeletonHomePage exact path="/" />
+                <LoadingSkeletonDetailsPage path="/details" />
+            </Router>
         </>
     );
 }

@@ -104,8 +104,7 @@ body {
         .css-1vmnjpn-skeletonStyles-Skeleton,
     &.theme-dark .loading-container .cards,
     &.theme-dark .searchandfilter > input {
-        transform-origin: top;
-        transition: 0.3s ease-in-out;
+        transition: 0.3s linear;
     }
 }
 body,
@@ -121,8 +120,8 @@ body,
 .border-countries-loading-skeleton .css-1vmnjpn-skeletonStyles-Skeleton,
 .loading-container .cards,
 .searchandfilter > input {
-    transform-origin: top;
-    transition: 0.3s ease-in-out;
+    transform-origin: bottom;
+    transition: 0.3s linear;
 }
 /*
     *   NAVBAR SECTION
@@ -137,8 +136,7 @@ body,
     background-color: $white;
     box-shadow: $shadow;
     z-index: 10;
-    // transform-origin: top;
-    // transition: 0.5s ease-in-out;
+
     h3 {
         font-size: 1.5em;
         cursor: pointer;
