@@ -85,13 +85,13 @@ body {
             background-color: $darkModeBackground;
             .css-1vmnjpn-skeletonStyles-Skeleton,
             .css-k31kfd-skeletonStyles-Skeleton {
-                background-color: $darkModeElements !important;
+                background-color: $darkModeElements;
                 background-image: linear-gradient(
                     90deg,
                     $darkModeElements,
                     hsl(207, 26%, 30%),
                     $darkModeElements
-                ) !important;
+                );
             }
         }
     }
