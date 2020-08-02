@@ -79,8 +79,10 @@ body {
         );
     }
 
-    &.theme-dark .loading-container .cards {
-        background-color: $darkModeBackground !important;
+    &.theme-dark .loading-container.cards-container {
+        .cards {
+            background-color: $darkModeBackground;
+        }
     }
 
     &.theme-dark,
@@ -447,25 +449,19 @@ body,
 /*
 *   LOADING SKELETON
 */
-
 .loading-container {
     display: flex;
     flex-direction: row;
     margin: 8em;
     justify-content: space-evenly;
 
-    .cards {
-        background-color: $lightModeBackground !important;
-        box-shadow: none !important;
+    .cards-contents {
+        display: flex;
+        flex-direction: column !important;
+        padding: 2em 0;
 
-        .cards-contents {
-            display: flex;
-            flex-direction: column !important;
-            padding: 2em 0;
-
-            .name {
-                margin-bottom: 1em;
-            }
+        .name {
+            margin-bottom: 1em;
         }
     }
 
@@ -540,6 +536,11 @@ body,
     }
 }
 .loading-container.cards-container {
+    .cards {
+        background-color: $lightModeBackground;
+        box-shadow: none;
+    }
+
     @include respond(tablet) {
         flex-direction: row;
         .cards {
