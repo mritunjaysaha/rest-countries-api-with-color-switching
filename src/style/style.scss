@@ -258,6 +258,12 @@ body {
     background-size: 400px;
     background-repeat: no-repeat;
     background-position: center;
+
+    @include respond(mobile) {
+        height: 100%;
+        width: 90%;
+        background-size: contain;
+    }
 } /*
 *   DETAILS PAGE SECTION
 */
