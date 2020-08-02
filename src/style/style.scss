@@ -82,8 +82,46 @@ body {
     &.theme-dark .loading-container .cards {
         background-color: $darkModeBackground !important;
     }
-}
 
+    &.theme-dark,
+    &.theme-dark .searchandfilter,
+    &.theme-dark .cards,
+    &.theme-dark .navbar,
+    &.theme-dark .searchandfilter,
+    &.theme-dark .MuiList-root.MuiMenu-list.MuiList-padding,
+    &.theme-dark .back-btn,
+    &.theme-dark
+        .country-contents-container
+        .border-countries
+        .border-countries-btn,
+    &.theme-dark
+        .MuiSelect-root.MuiSelect-select.MuiSelect-selectMenu.MuiInputBase-input.MuiInput-input,
+    &.theme-dark .loading-container .css-1vmnjpn-skeletonStyles-Skeleton,
+    &.theme-dark
+        .border-countries-loading-skeleton
+        .css-1vmnjpn-skeletonStyles-Skeleton,
+    &.theme-dark .loading-container .cards,
+    &.theme-dark .searchandfilter > input {
+        transform-origin: top;
+        transition: 0.3s ease-in-out;
+    }
+}
+body,
+.searchandfilter,
+.cards,
+.navbar,
+.searchandfilter,
+.MuiList-root.MuiMenu-list.MuiList-padding,
+.back-btn,
+.country-contents-container .border-countries .border-countries-btn,
+.MuiSelect-root.MuiSelect-select.MuiSelect-selectMenu.MuiInputBase-input.MuiInput-input,
+.loading-container .css-1vmnjpn-skeletonStyles-Skeleton,
+.border-countries-loading-skeleton .css-1vmnjpn-skeletonStyles-Skeleton,
+.loading-container .cards,
+.searchandfilter > input {
+    transform-origin: top;
+    transition: 0.3s ease-in-out;
+}
 /*
     *   NAVBAR SECTION
     */
@@ -97,6 +135,8 @@ body {
     background-color: $white;
     box-shadow: $shadow;
     z-index: 10;
+    // transform-origin: top;
+    // transition: 0.5s ease-in-out;
     h3 {
         font-size: 1.5em;
         cursor: pointer;
