@@ -17,11 +17,12 @@ function App() {
                     <HomePage exact path="/" />
                 </Router>
             </Suspense>
-            <Suspense fallback={<LoadingSkeletonDetailsPage />}>
+            {/* <Suspense fallback={<LoadingSkeletonDetailsPage />}>
                 <Router>
                     <DetailsPage path="/details" />
                 </Router>
-            </Suspense>
+            </Suspense> */}
+            <LoadingSkeletonDetailsPage path="/details" />
         </>
     );
 }
