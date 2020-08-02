@@ -66,12 +66,15 @@ body {
         color: #fff !important;
     }
 
-    &.theme-dark .loading-container .css-1vmnjpn-skeletonStyles-Skeleton {
+    &.theme-dark .loading-container .css-1vmnjpn-skeletonStyles-Skeleton,
+    &.theme-dark
+        .border-countries-loading-skeleton
+        .css-1vmnjpn-skeletonStyles-Skeleton {
         background-color: $darkModeElements;
         background-image: linear-gradient(
             90deg,
             $darkModeElements,
-            $darkModeBackground,
+            hsl(207, 26%, 30%),
             $darkModeElements
         );
     }
@@ -92,6 +95,7 @@ body {
     z-index: 10;
     h3 {
         font-size: 1.5em;
+        cursor: pointer;
     }
     .theme-switch {
         display: flex;
@@ -399,10 +403,27 @@ body {
 /*
 *   LOADING SKELETON
 */
+
 .loading-container {
     display: flex;
     flex-direction: row;
     margin: 8em;
+    justify-content: space-evenly;
+
+    .cards {
+        background-color: $darkModeBackground !important;
+        box-shadow: none !important;
+
+        .cards-contents {
+            display: flex;
+            flex-direction: column !important;
+            padding: 2em 0;
+
+            .name {
+                margin-bottom: 1em;
+            }
+        }
+    }
 
     .contents-skeleton {
         display: flex;
@@ -473,15 +494,39 @@ body {
             display: none;
         }
     }
+}
+.loading-container.cards-container {
+    @include respond(tablet) {
+        flex-direction: row;
+        .cards {
+            width: 30vw;
+        }
+        .react-loading-skeleton.flag.css-1vmnjpn-skeletonStyles-Skeleton {
+            width: 250px !important;
+            height: 150px !important;
+        }
+        .cards-4 {
+            display: none;
+        }
+    }
 
-    // .css-1vmnjpn-skeletonStyles-Skeleton {
-    //     background-size: 200px 100%;
-    //     background-repeat: no-repeat;
-    //     border-radius: 4px;
-    //     display: inline-block;
-    //     line-height: 1;
-    //     width: 100%;
-    //     -webkit-animation: animation-16jpnkj 1.2s ease-in-out infinite;
-    //     animation: animation-16jpnkj 1.2s ease-in-out infinite;
-    // }
+    @include respond(mobile) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2em;
+        margin: 0 !important;
+
+        .react-loading-skeleton.flag.css-1vmnjpn-skeletonStyles-Skeleton {
+            width: 250px !important;
+            height: 150px !important;
+        }
+        .cards-contents {
+            padding: 0;
+        }
+        .cards-2,
+        .cards-3,
+        .cards-4 {
+            display: none;
+        }
+    }
 }
