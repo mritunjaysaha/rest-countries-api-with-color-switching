@@ -4,7 +4,7 @@ export default function LoadingSkeletonDetailsPage() {
     return (
         <div className="loading-container">
             <div className="flag-skeleton">
-                <Skeleton width={400} height={300} />
+                <Skeleton className="flag" width={400} height={300} />
             </div>
             <div className="contents-skeleton">
                 <Skeleton className="name" width={200} height={30} />
@@ -31,7 +31,7 @@ export default function LoadingSkeletonDetailsPage() {
                             <Skeleton width={150} height={20} />
                         </p>
                     </div>
-                    <div className="contents-right">
+                    {/* <div className="contents-right">
                         <p className="row">
                             <Skeleton width={200} height={20} />
                             &nbsp;&nbsp;
@@ -47,7 +47,7 @@ export default function LoadingSkeletonDetailsPage() {
                             &nbsp;&nbsp;
                             <Skeleton width={150} height={20} />
                         </p>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="contents-border">
                     <Skeleton width={200} height={20} />
@@ -55,8 +55,6 @@ export default function LoadingSkeletonDetailsPage() {
                     <span className="countries">
                         <Skeleton width={100} height={20} />{" "}
                         <Skeleton width={100} height={20} />{" "}
-                        <Skeleton width={100} height={20} />{" "}
-                        <Skeleton width={100} height={20} />
                     </span>
                 </div>
             </div>

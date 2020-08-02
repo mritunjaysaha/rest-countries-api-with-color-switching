@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
-import BorderCountries from "./BorderCountries";
+import React, { useEffect, useState, lazy, Suspense } from "react";
+import LoadingSkeletonBorderCountries from "./LoadingSkeletonBorderCountries";
+const BorderCountries = lazy(() => import("./BorderCountries"));
 
 export default function CountryDetails(props) {
     const languages = props.languages;
@@ -61,7 +62,11 @@ export default function CountryDetails(props) {
                     <p>
                         Border Countries:&nbsp;&nbsp;
                         <span>
-                            <BorderCountries countries={props.border} />
+                            <Suspense
+                                fallback={<LoadingSkeletonBorderCountries />}
+                            >
+                                <BorderCountries countries={props.border} />
+                            </Suspense>
                         </span>
                     </p>
                 </div>
